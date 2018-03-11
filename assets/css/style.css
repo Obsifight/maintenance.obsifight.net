@@ -8,6 +8,7 @@ body {
      background-image: url('../img/backgrounds/blur.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
+	background-size: cover;
 }
 
 strong { font-weight: 700; }
