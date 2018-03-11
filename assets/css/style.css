@@ -1,0 +1,561 @@
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+
+     background-image: url('../img/backgrounds/blur.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+strong { font-weight: 700; }
+
+a, a:hover, a:focus {
+	color: #35969a;
+	text-decoration: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+h1, h2 {
+	margin-top: 10px;
+	font-size: 42px;
+    font-weight: 300;
+    line-height: 54px;
+}
+
+h3 {
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+img { max-width: 100%; }
+
+::-moz-selection { background: #35969a; color: #fff; text-shadow: none; }
+::selection { background: #35969a; color: #fff; text-shadow: none; }
+
+
+/***** Loader *****/
+
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	overflow: hidden !important;
+	z-index: 99999;
+}
+
+.loader-img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -30px 0 0 -30px;
+	width: 60px;
+	height: 60px;
+	background: url(../img/loading.gif) center center no-repeat;
+}
+
+
+/***** General style, all sections *****/
+
+.section-container {
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.section-description {
+	margin-top: 60px;
+    padding-bottom: 10px;
+}
+
+.section-description p {
+    margin-top: 30px;
+	padding: 0 120px;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+
+/***** Scroll arrows *****/
+
+.scroll-page {
+	margin-top: 60px;
+	font-size: 36px;
+}
+.scroll-page a, .scroll-page a:hover { color: #fff; }
+
+
+/***** Modal *****/
+
+.modal-content {
+	background-color: #333;
+	font-size: 18px;
+    line-height: 32px;
+	text-align: left;
+}
+
+.modal-content h4 {
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+.modal-body {
+	padding: 15px 25px;
+}
+
+.modal-body img {
+	margin-bottom: 15px;
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.modal-header {
+	padding: 25px 25px 15px 25px;
+}
+
+.modal-footer {
+	padding: 15px 25px 25px 25px;
+}
+
+.modal-header, .modal-footer { border: 0; }
+
+.modal-header .close {
+	font-size: 36px;
+	color: #fff;
+	font-weight: 300;
+	text-shadow: none;
+	opacity: 1;
+}
+
+.modal-button {
+	margin-top: 60px;
+}
+
+.modal-footer button, .modal-button button {
+	height: 52px;
+	margin: 0;
+    padding: 0 20px;
+	background: none;
+	border: 1px solid #fff;
+	font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    text-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+.modal-button button:hover, .modal-footer button:hover { opacity: 0.6; background: none; border: 1px solid #fff; color: #fff; }
+
+.modal-button button:focus, .modal-button button:active:focus, .modal-button button.active:focus { outline: 0; background: none; color: #fff; }
+
+.modal-footer button:focus, .modal-footer button:active:focus, .modal-footer button.active:focus { 
+	outline: 0; background: none; border: 1px solid #fff; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+
+
+/***** Top menu *****/
+
+nav {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 998;
+	background: #333;
+	background: rgba(51, 51, 51, 0.3);
+	font-size: 18px;
+	color: #fff;
+    line-height: 32px;
+    text-align: center;
+}
+
+nav a {
+	display: inline-block;
+	margin: 0 15px;
+	padding: 10px 0;
+	color: #fff;
+}
+nav a:hover { color: #35969a; }
+nav a:focus { color: #35969a; outline: 0; }
+
+.show-menu, .hide-menu {
+	position: absolute;
+	top: -6px;
+	right: 100px;
+	padding: 0 20px;
+	z-index: 999;
+	text-align: center;
+}
+.hide-menu { top: -1px; }
+
+.show-menu a, .hide-menu a {
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	padding-top: 11px;
+	font-size: 21px;
+	color: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.show-menu a:hover, .hide-menu a:hover { color: #fff; }
+
+.show-menu a {
+	background: #333;
+	background: rgba(51, 51, 51, 0.3);
+}
+
+
+/***** Top content *****/
+
+.top-content {
+    margin: 0 auto;
+}
+
+.inner-bg {
+    padding: 120px 0;
+}
+
+.top-content .logo {
+	padding-bottom: 40px;
+}
+
+.top-content .logo a {
+	display: inline-block;
+	width: 180px;
+	height: 82px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/logo.png) left center no-repeat;
+	text-indent: -9999px;
+}
+.top-content .logo a:focus { outline: 0; }
+
+.top-content h1 {
+	padding: 0 120px;
+}
+
+.top-content .description {
+	margin: 40px 0 10px 0;
+	padding: 0 120px;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.timer {
+    margin-top: 60px;
+}
+
+.timer .days-wrapper,
+.timer .hours-wrapper,
+.timer .minutes-wrapper,
+.timer .seconds-wrapper {
+    display: inline-block;
+    width: 160px;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.timer .days,
+.timer .hours,
+.timer .minutes,
+.timer .seconds {
+    font-size: 80px;
+    font-weight: 100;
+    line-height: 90px;
+}
+
+
+/***** Subscription form *****/
+
+.subscribe form {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.subscribe form input.subscribe-email {
+    width: 362px;
+    height: 52px;
+}
+
+.success-message, .error-message {
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.success-message {
+	margin: 20px 0 10px 0;
+}
+
+.error-message {
+	margin: 10px 0;
+	color: #35969a;
+}
+
+
+/***** Features *****/
+
+.features-box {
+	margin-top: 30px;
+}
+
+.features-box h3 {
+	padding: 10px 0;
+}
+
+.features-box p {
+	font-size: 18px;
+    line-height: 32px;
+}
+
+.features-box .features-box-icon {
+    width: 80px;
+	height: 80px;
+    margin: 0 auto;
+	padding-top: 10px;
+	background: #35969a;
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 50px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}
+
+.features-box .features-box-icon i { vertical-align: middle; }
+
+
+/***** Testimonials *****/
+
+.testimonials p {
+	padding: 0;
+}
+
+.testimonials a { color: #fff; border-bottom: 1px dotted #fff; }
+.testimonials a:hover, .testimonials .scroll-page a { color: #fff; border: 0; }
+
+.testimonial-single {
+	display: inline-block;
+}
+
+.testimonial-single p {
+	display: none;
+}
+
+.testimonial-single-image {
+	display: inline-block;
+	width: 58px;
+	margin: 0 5px 10px 5px;
+}
+
+.testimonial-single-image img {
+	width: 100%;
+	opacity: 0.5;
+	cursor: pointer;
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.testimonial-active {
+	padding-bottom: 20px;
+}
+
+
+/***** About us *****/
+
+.about-us-box {
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.about-us-box h3 {
+	padding: 10px 0;
+}
+
+.about-us-box p {
+	font-size: 18px;
+    line-height: 32px;
+}
+
+.about-us-box .about-us-photo {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+}
+
+.about-us-box .about-us-photo img {
+	width: 100%;
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.about-us-box .about-us-social {
+    margin-top: 5px;
+}
+
+
+/***** Contact us *****/
+
+.contact-form, 
+.contact-address {
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.contact-form h3, 
+.contact-address h3 {
+	padding: 0 0 10px 0;
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+.contact-form p {
+	margin: 15px 0 0 0;
+	font-size: 18px;
+	line-height: 32px;
+}
+
+.contact-form form {
+	margin: 15px 0 0 0;
+}
+
+.contact-form form input, 
+.contact-form form textarea {
+    width: 95%;
+    height: 52px;
+    margin-bottom: 5px;
+}
+
+.contact-form form textarea {
+	height: 162px;
+}
+
+.contact-form form .contact-error {
+	border-color: #35969a;
+}
+
+.contact-address .map {
+	height: 210px;
+	margin: 15px 0 40px 0;
+}
+
+.contact-address p {
+	margin-bottom: 5px;
+	font-size: 18px;
+    line-height: 32px;
+}
+
+.contact-address p i {
+	width: 40px;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.contact-address a, .contact-address a:focus { color: #fff; }
+.contact-address a:hover { color: #fff; border-bottom: 1px dotted #fff; }
+
+
+/***** Footer *****/
+
+footer {
+	padding: 25px 0 20px 0;
+	background: #333;
+	background: rgba(51, 51, 51, 0.3);
+	text-align: right;
+}
+
+.footer-copyright {
+	margin: 6px 0 0 0;
+	font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+}
+
+.footer-copyright a, .footer-copyright a:focus { color: #fff; }
+.footer-copyright a:hover { color: #fff; border-bottom: 1px dotted #fff; }
+
+
+
+/* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('../img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 12 css */
+        /*
+        .jssora12l                  (normal)
+        .jssora12r                  (normal)
+        .jssora12l:hover            (normal mouseover)
+        .jssora12r:hover            (normal mouseover)
+        .jssora12l.jssora12ldn      (mousedown)
+        .jssora12r.jssora12rdn      (mousedown)
+        */
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background: url('../img/a12.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora12l { background-position: -16px -37px; }
+        .jssora12r { background-position: -75px -37px; }
+        .jssora12l:hover { background-position: -136px -37px; }
+        .jssora12r:hover { background-position: -195px -37px; }
+        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }
